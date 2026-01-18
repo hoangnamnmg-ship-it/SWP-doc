@@ -83,9 +83,13 @@ Dành cho các chủ cửa hàng bán lẻ và quản lý cửa hàng (Shop Mana
 | **Sales Staff** | (Tương lai) Quy trình bán hàng nhanh gọn. | Dễ sử dụng, ổn định. |
 
 ### 3.2. Project Priorities
-1.  **Chất lượng (Quality) - Driver:** Hệ thống phải đảm bảo tính đúng đắn của dữ liệu và bảo mật cao nhất do liên quan đến quản trị.
-2.  **Thời gian (Schedule) - Constraint:** Phải hoàn thành bộ khung Admin để làm nền tảng phát triển các module bán hàng sau này.
-3.  **Tính năng (Scope) - Degree of Freedom:** Có thể cắt giảm các tính năng UI đẹp mắt ở backend để tập trung vào logic xử lý dữ liệu đúng.
+| Dimension | Driver (State Objective) | Constraint (State Limit) | Degree of Freedom (State Allowable Range) |
+| :--- | :--- | :--- | :--- |
+| **Schedule (Tiến độ)** | | Release 1.0 hoàn thành bộ khung Admin vào [Ngày cụ thể] | |
+| **Features (Tính năng)** | | | 70% các tính năng Admin không cốt lõi có thể dời sang v1.1 |
+| **Quality (Chất lượng)** | Tính toàn vẹn dữ liệu và Bảo mật phải tuyệt đối (0% lỗi dữ liệu nghiêm trọng) | | |
+| **Cost (Chi phí)** | | Tận dụng tối đa phần cứng hiện có, chi phí hạ tầng tối thiểu | |
+| **Staff (Nhân sự)** | | Team giữ nguyên quy mô hiện tại, không tuyển thêm | |
 
 ### 3.3. Deployment Considerations
 *   **Environment:** Web Application (Java-based backend as hinted by 'Bean Interface').
