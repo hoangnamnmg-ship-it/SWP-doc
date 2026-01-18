@@ -1,98 +1,144 @@
-# Vision and Scope Document
-**Project:** LocalStore POS  
-**Version:** 1.0 (Draft)  
-**Status:** In Progress  
+---
+title: Vision and Scope Document
+project: LocalStore POS
+version: 1.1 (Detailed Draft)
+date: 2026-01-18
+author: Business Analyst Team
+template_source: "Software Requirements, 3rd Edition (Wiegers & Beatty) - Chapter 5"
+---
+
+# VISION AND SCOPE DOCUMENT
+**Project:** LocalStore POS (Point of Sale)
 
 ---
 
-## 1. Business Requirements
+## 1. BUSINESS REQUIREMENTS
 
 ### 1.1. Background
-Currently, many small-scale local retail stores still manage inventory and revenue using manual ledgers or disjointed Excel files. Failure to grasp accurate stock levels and real-time actual revenue leads to goods loss, unannounced stockouts, and difficulty in evaluating business performance. The **LocalStore POS** project has been re-oriented to strictly resolve the core issues: **Inventory - Sales - Revenue**.
+Currently, many small-scale local retail stores still manage inventory and operational revenue using manual ledgers, sticky notes, or disjointed Excel files. This fragmented approach leads to several critical issues:
+*   **Inventory Blindness:** Store owners cannot instantly know the exact stock quantity of a specific item, leading to unannounced stockouts or overstocking of slow-moving items.
+*   **Revenue Leakage:** Without a standardized recording system, sales transactions can be missed, miscalculated, or manipulated, causing discrepancy between actual cash and recorded revenue.
+*   **Inefficient Checkout:** Manual price lookup and calculation slow down the checkout process during peak hours, reducing customer satisfaction.
+*   **Lack of Insight:** End-of-day/month balancing is purely manual and time-consuming; owners lack data-driven insights on "Best Sellers" or "Profit Margins" to make purchasing decisions.
+
+The **LocalStore POS** project has been re-oriented to strictly resolve these core issues by providing a centralized digital solution focused on **Inventory Transparency, Fast Sales Execution, and Accurate Revenue Reporting**.
 
 ### 1.2. Business Opportunity
-Store owners need a simple yet effective tool to control cash flow and goods flow. They do not need complex HR management features (like timekeeping, shift scheduling) but require absolute accuracy in stock figures and sales speed. The opportunity lies in providing a POS system maximizing the fast selling experience and intelligent reporting, helping owners immediately answer: "How much did we sell today?" and "How much stock is left?".
+Implementing LocalStore POS addresses the immediate needs of store owners for control and efficiency:
+*   **Digital Transformation:** Moving from "pen and paper" to a digital database ensures data persistence and accuracy.
+*   **Operational Speed:** Automating the checkout process with barcode scanning and auto-calculation reduces customer wait time significantly.
+*   **Loss Prevention:** Strict inventory tracking (Input vs. Output) minimizes goods loss due to theft or mismanagement.
+*   **Smart Decision Making:** Real-time dashboards provide instant visibility into financial health, allowing owners to restock the right products at the right time.
 
 ### 1.3. Business Objectives
-*   **BO-1:** Reduce inventory discrepancy rate to under 1% after 2 months of deployment thanks to strict import/export processes.
-*   **BO-2:** Accelerate order processing speed at the checkout counter, aiming for under 30 seconds per order.
-*   **BO-3:** Provide real-time Revenue and Profit reporting, completely eliminating manual end-of-day tallying.
+The system aims to achieve the following tangible goals within 3 months of deployment:
+*   **BO-1 (Inventory Accuracy):** Reduce the inventory discrepancy rate (System vs. Physical) to under **1%** through strict import/export workflows and barcode verification.
+*   **BO-2 (Checkout Efficiency):** Accelerate the average order processing speed at the counter to under **30 seconds per transaction** (from scanning to bill printing).
+*   **BO-3 (Revenue Visibility):** Provide **Real-time** Profit & Loss reporting, completely eliminating the 1-2 hours typically spent on manual end-of-day ledger tallying.
+*   **BO-4 (Zero Downtime):** Ensure the sales process is uninterrupted even during high-traffic periods through a lightweight and stable architecture.
 
 ### 1.4. Success Metrics
-*   **SM-1:** 100% of sales transactions are recorded in the system and inventory is deducted automatically and immediately.
-*   **SM-2:** Daily revenue report is generated accurately with just 1 click.
-*   **SM-3:** Training time for new staff to use sales features is under 30 minutes.
+Project success will be measured by the following quantitative metrics:
+*   **SM-1:** 100% of valuable product details (Price, Cost, Stock) are digitized and accessible via the system.
+*   **SM-2:** 95% of sales staff can independently operate the POS sales screen without supervision after receiving 30 minutes of training.
+*   **SM-3:** Key financial reports (Daily Revenue) are generated instantaneously (latency < 2 seconds) upon request.
+*   **SM-4:** 100% of sales transactions are recorded with audit trails (Who sold, When, What items), enabling full traceability.
 
 ### 1.5. Vision Statement
-For retail store owners prioritizing business efficiency and cash flow transparency, **LocalStore POS** is a management system focused on Inventory and Revenue. Unlike "bulky" POS systems integrated with too many unnecessary HR administration features, **LocalStore POS** optimizes the core processes: Fast Import - Quick Sell - Accurate Report.
+> *"For retail store owners and Shop Managers who prioritize business efficiency and cash flow transparency, **LocalStore POS** is a specialized management system focused strictly on **Inventory and Revenue**. Unlike 'bulky' generic POS systems that are cluttered with unnecessary HR or complex accounting features, LocalStore POS optimizes the core operational loop: **Rapid Import -> Instant Sell -> Accurate Report**. Our product guarantees that store owners always know exactly what they have in stock and how much profit they made today, effortlessly."*
 
 ### 1.6. Business Risks
-*   **RI-1:** End-users (sales staff) may encounter difficulties if the admin interface is too complex or overly technical.
-*   **RI-2:** Integration with specific POS hardware (printers, cash drawers) may encounter unforeseen driver errors.
-*   **RI-3:** Data security risks if the authorization mechanism is not thoroughly tested.
+*   **RI-1 (Adoption Resistance):** Older staff members may struggle with using computers/barcode scanners compared to manual calculators.
+    *   *Mitigation:* Design an extremely simplified, high-contrast User Interface (UI) for the Checkout screen, minimizing required clicks. Provide "Hands-on" training.
+*   **RI-2 (Hardware Compatibility):** Diverse variety of cheap barcode scanners/printers in the market might cause driver conflicts.
+    *   *Mitigation:* Standardize on "Plug-and-Play" HID-compliant hardware protocols. Publish a list of "Recommended Hardware".
+*   **RI-3 (Data Loss):** Local hardware failure (PC crash) could lead to loss of sales data if not backed up.
+    *   *Mitigation:* Implement cloud-sync capabilities or automated daily local backups to an external drive/secondary partition.
 
 ### 1.7. Business Assumptions and Dependencies
-*   **AS-1:** The store has a stable internet network infrastructure.
-*   **AS-2:** The System Administrator has basic knowledge of the store's business processes.
-*   **DE-1:** The project depends on the completion of the Database Schema design (as described in the G6_RDS document) before logic coding can begin.
+*   **AS-1:** The store is equipped with a stable internet connection (for web-based access) and basic computer hardware (PC/Laptop).
+*   **AS-2:** Store owners are willing to perform an initial "Physical Stock Take" to populate the database with accurate starting quantities.
+*   **DE-1:** The project relies on the finalized database schema design (G6_RDS) to ensure data integrity constraints are met from Day 1.
 
 ---
 
-## 2. Scope and Limitations
+## 2. SCOPE AND LIMITATIONS
 
 ### 2.1. Major Features
-*   **Inventory & Stock Management (Core):**
-    *   Product List Management (Name, Price, Barcode, Image).
-    *   Import and Export Management.
-    *   Low stock alerts.
-*   **Sales & POS (Core):**
-    *   Sales Screen (Checkout) supporting barcode scanning.
-    *   Invoice creation, calculation, bill printing.
-    *   Return/Refund handling.
-*   **Reporting & Analytics:**
-    *   Revenue Statistics by Day/Week/Month.
-    *   Top-selling products report.
-    *   Profit Report (Revenue - Cost of Goods Sold).
+The system is functionally organized into 4 main feature groups:
+
+*   **FE-1: Inventory & Product Management (The Foundation)**
+    *   **Product CRUD:** Create and maintain detailed product profiles (Name, Barcode, Selling Price, Cost Price, Unit, Category, Image).
+    *   **Stock Management:**
+        *   **Import Goods:** Record incoming stock from suppliers (updates quantity and cost price).
+        *   **Stock Adjustment:** Manual correction for damaged/lost goods.
+    *   **Low Stock Alert:** Visual indicators when item quantity falls below a defined threshold.
+
+*   **FE-2: Sales & POS Operation (The Core)**
+    *   **Checkout Screen:** Optimized interface for speed. Supports:
+        *   Barcode scanning (via USB scanner).
+        *   Quick product search by name/code.
+        *   Quantity adjustment.
+    *   **Transaction Processing:** Auto-calculate total, change due, and finalize order.
+    *   **Receipt Printing:** Generate standardized thermal receipts (58mm/80mm) for customers.
+    *   **Return/Refund:** Process returns with reason codes and update inventory automatically.
+
+*   **FE-3: Reporting & Analytics (The Insight)**
+    *   **Revenue Reports:** Aggregated sales views by Day, Week, Month, or Custom Range.
+    *   **Best-Seller Analysis:** Indentify Top 10 performing products by quantity or revenue.
+    *   **Profit Estimates:** Approximate profit calculation (Revenue - Cost of Goods Sold) to gauge business health.
+
+*   **FE-4: System Administration (The Control)**
+    *   **User Management:** Create accounts for Owner (Admin) and Staff (Cashier).
+    *   **Basic Auth:** Secure Login/Logout mechanism.
+    *   **Settings:** Configure store details (Name, Address, Phone) to appear on receipts.
 
 ### 2.2. Scope of Initial and Subsequent Releases
+The roadmap prioritizes core transactional stability before advanced features.
 
-| Feature | Initial Release (v1.0) | Subsequent Releases (v1.x -> v2.0) |
+| Feature Group | Release 1.0 (Foundation - MVP) | Release 2.0 (Growth - Future) |
 | :--- | :--- | :--- |
-| **Inventory** | Product CRUD, Basic Stock Update | Batch/Date Management, Multi-Unit Management |
-| **Sales** | Retail Invoice Creation, Barcode Scanning, Bill Printing | Offline Sales, Electronic Scale Integration |
-| **Reporting** | Aggregate Revenue, Invoice History | Trend Analysis, Reorder Forecasting |
-| **Other Admin** | Simple Login (Owner/Staff) | Detailed Permissions, Audit Logs |
-
-> *Note: Based on the provided G6_RDS document, the first version focuses heavily on the administrative framework (Admin/Back-office).*
+| **Inventory** | **Basic:** Single Unit, standard stock tracking. | **Advanced:** Multi-unit conversion (e.g., Box -> Pieces), Batch/Expiry Date tracking. |
+| **Sales POS** | **Online Mode:** Web-based checkout, standard USB scanner support. | **Offline Mode:** LocalStorage support when internet is down. Electronic Scale integration. |
+| **Reporting** | **Static Tables:** Grid views, basic totals. | **Visual:** Interactive Charts, Graphs, and Export to Excel/PDF. |
+| **Customer** | **Generic:** Walk-in customers only. | **Loyalty:** Member point accumulation, Customer history. |
+| **Promotions** | **Manual:** Cashier enters discount amount manually. | **Auto:** System-applied rules (Buy 1 Get 1, Happy Hour). |
 
 ### 2.3. Limitations and Exclusions
-*   **L-1:** The first version does not support Offline sales (when internet is lost).
-*   **L-2:** Online payment gateway integration (Momo, VNPay) is not included in this stage.
-*   **E-1:** CRM features (Loyalty Management) are excluded from Release 1.0.
+*   **EX-1 (No Accounting Depth):** The system records sales revenue but is **NOT** a full accounting system. It does not handle tax filing, balance sheets, or detailed expenses (rent, electricity).
+*   **EX-2 (No HR/Payroll):** As requested, features related to Employee Shift Scheduling, Timekeeping, and Salary Calculation are strictly **EXCLUDED**.
+*   **EX-3 (No Multi-Store Sync):** Release 1.0 is designed for a **Single Store** architecture. Multi-branch inventory syncing is out of scope.
+*   **EX-4 (No E-commerce):** This is an in-store POS. It does not integrate with online sales channels (Shopee, Website).
 
 ---
 
-## 3. Business Context
+## 3. BUSINESS CONTEXT
 
 ### 3.1. Stakeholder Profiles
 
 | Stakeholder | Value/Benefit | Attitude | Key Interests | Constraints |
 | :--- | :--- | :--- | :--- | :--- |
-| **Shop Owner** | Full operational control, reduced loss. | Strong supporter | Revenue reports, System security, Cost reduction. | Budget for new hardware. |
-| **Administrator** | Centralized management tool, easy system configuration. | Supportive but wary of complexity | User Management, Data Integrity, Ease of config. | Time needed for initial setup. |
-| **Sales Staff** | (Future) Streamlined sales process. | Potential resistance to change | Ease of use, Stability, Speed of checkout. | Limited technical skills. |
+| **Shop Owner** | Full control of inventory and cash, eliminates leakage. | Strongly supportive (Driver). | Accurate Profit/Loss data, Theft prevention, Easy setup. | Limited budget for hardware, low tolerance for downtime. |
+| **Sales Staff** | Faster checkout, no mental math errors, automatic stock check. | Mixed (Wary of monitoring). | Ease of use (few clicks), Reliability (no crashes during rush), Clear shift handover. | Limited technical skills, high turnover rate. |
+| **Admin** | Centralized configuration, easy user mgmt. | Supportive. | Data integrity, Security, Audit logs. | Time available for initial data entry. |
 
 ### 3.2. Project Priorities
 
-| Dimension | Driver (State Objective) | Constraint (State Limit) | Degree of Freedom (State Allowable Range) |
+| Dimension | Constraint (Must adhere to) | Driver (Key success factor) | Degree of Freedom (Adjustable) |
 | :--- | :--- | :--- | :--- |
-| **Schedule** | | Release 1.0 to be completed by [Date] (Foundation Phase) | |
-| **Features** | | | 70% of non-core Admin features can be deferred to v1.1 |
-| **Quality** | Data Integrity and Security must be impeccable (0% critical data errors) | | |
-| **Cost** | | Minimal infrastructure cost (utilize existing hardware) | |
-| **Staff** | | Team size fixed at current capacity | |
+| **Quality** | **Data Integrity:** Zero tolerance for inventory/revenue calculation errors. | | |
+| **Schedule** | | **Release 1.0** must be ready for UAT by [Date]. | |
+| **Budget** | Minimal infrastructure cost (utilize existing PC). | | |
+| **Features** | | **Checkout Speed** & **Stock Accuracy**. | "Nice-to-have" UI animations or advanced filters can be cut. |
+| **Usability** | | Zero-training interface for cashiers. | |
 
 ### 3.3. Deployment Considerations
-*   **Environment:** Web Application (Java-based backend).
-*   **Access:** Access via internal web browser or public internet (HTTPS configuration required).
-*   **Training:** User manuals needed for Admins on Initial Data Setup.
+*   **Hardware Setup:**
+    *   System runs on a standard Windows PC/Laptop or Tablet via Browser.
+    *   Peripherals: USB Barcode Scanner (HID Mode) and Thermal Receipt Printer (USB/LAN).
+*   **Data Migration (Critical):**
+    *   The system must provide an **"Import from Excel"** feature for Products. Manually entering 1000+ items is a blocker for adoption.
+    *   Initial "Stock Take" strategy must be planned with the store owner before Go-Live.
+*   **Training Plan:**
+    *   **Owner Training:** Focus on Product creation, Import, and Report interpretation.
+    *   **Staff Training:** Focus strictly on Checkout flow, Search, and Refund processing.
