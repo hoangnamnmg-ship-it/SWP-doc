@@ -76,11 +76,11 @@ Dành cho các chủ cửa hàng bán lẻ và quản lý cửa hàng (Shop Mana
 
 ### 3.1. Stakeholder Profiles
 
-| Stakeholder | Value/Benefit | Interest |
-| :--- | :--- | :--- |
-| **Shop Owner** | Kiểm soát toàn bộ hoạt động, giảm thất thoát. | Báo cáo doanh thu, Bảo mật hệ thống. |
-| **Administrator** | Công cụ quản lý tập trung, dễ dàng cấu hình hệ thống. | Quản lý User, Quản lý Setting, Data Integrity. |
-| **Sales Staff** | (Tương lai) Quy trình bán hàng nhanh gọn. | Dễ sử dụng, ổn định. |
+| Stakeholder | Value/Benefit | Attitude | Key Interests | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| **Shop Owner** | Kiểm soát toàn bộ hoạt động, giảm thất thoát. | Ủng hộ mạnh mẽ | Báo cáo doanh thu, Bảo mật hệ thống, Giảm chi phí. | Ngân sách cho phần cứng mới. |
+| **Administrator** | Công cụ quản lý tập trung, dễ dàng cấu hình hệ thống. | Ủng hộ nhưng ngại phức tạp | Quản lý User, Tính toàn vẹn dữ liệu, Cấu hình dễ dàng. | Thời gian thiết lập ban đầu. |
+| **Sales Staff** | (Tương lai) Quy trình bán hàng nhanh gọn. | Có thể ngại thay đổi | Dễ sử dụng, Ổn định, Tốc độ thanh toán. | Kỹ năng công nghệ hạn chế. |
 
 ### 3.2. Project Priorities
 | Dimension | Driver (State Objective) | Constraint (State Limit) | Degree of Freedom (State Allowable Range) |

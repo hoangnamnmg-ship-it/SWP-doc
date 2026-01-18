@@ -76,11 +76,11 @@ For retail store owners and Shop Managers who need strict and flexible control o
 
 ### 3.1. Stakeholder Profiles
 
-| Stakeholder | Value/Benefit | Interest |
-| :--- | :--- | :--- |
-| **Shop Owner** | Full operational control, reduced loss. | Revenue reports, System security. |
-| **Administrator** | Centralized management tool, easy system configuration. | User Management, Setting Management, Data Integrity. |
-| **Sales Staff** | (Future) Streamlined sales process. | Ease of use, Stability. |
+| Stakeholder | Value/Benefit | Attitude | Key Interests | Constraints |
+| :--- | :--- | :--- | :--- | :--- |
+| **Shop Owner** | Full operational control, reduced loss. | Strong supporter | Revenue reports, System security, Cost reduction. | Budget for new hardware. |
+| **Administrator** | Centralized management tool, easy system configuration. | Supportive but wary of complexity | User Management, Data Integrity, Ease of config. | Time needed for initial setup. |
+| **Sales Staff** | (Future) Streamlined sales process. | Potential resistance to change | Ease of use, Stability, Speed of checkout. | Limited technical skills. |
 
 ### 3.2. Project Priorities
 
