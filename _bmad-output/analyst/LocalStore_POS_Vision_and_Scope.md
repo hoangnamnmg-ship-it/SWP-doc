@@ -116,11 +116,24 @@ Lộ trình ưu tiên sự ổn định của các giao dịch cốt lõi trư�
 
 ### 3.1. Hồ sơ Các bên Liên quan
 
+### 3.1. Hồ sơ Các bên Liên quan & Thực thể Bên ngoài
+
+**Các bên liên quan (Con người):**
+
 | Bên Liên quan | Giá trị/Lợi ích | Thái độ | Mối quan tâm Chính | Ràng buộc |
 | :--- | :--- | :--- | :--- | :--- |
-| **Chủ Cửa hàng** | Kiểm soát hoàn toàn tồn kho và tiền mặt, loại bỏ thất thoát. | Ủng hộ mạnh mẽ (Động lực chính). | Dữ liệu Lãi/Lỗ chính xác, Chống trộm cắp, Dễ dàng thiết lập. | Ngân sách hạn chế cho phần cứng, ít chấp nhận thời gian chết. |
-| **Nhân viên Bán hàng** | Thanh toán nhanh hơn, không lỗi tính nhẩm, kiểm tra kho tự động. | Trái chiều (E ngại bị giám sát). | Dễ sử dụng (ít thao tác), Ổn định (không treo máy giờ cao điểm), Bàn giao ca rõ ràng. | Kỹ năng kỹ thuật hạn chế, tỷ lệ thay thế nhân sự cao. |
-| **Admin** | Cấu hình tập trung, quản lý người dùng dễ dàng. | Ủng hộ. | Toàn vẹn dữ liệu, Bảo mật, Nhật ký kiểm toán. | Thời gian có hạn cho việc nhập liệu ban đầu. |
+| **Manager (Quản lý)** | Giám sát toàn diện hoạt động; Ra quyết định dựa trên dữ liệu. | Ủng hộ mạnh mẽ (Động lực chính). | Báo cáo doanh thu, Quản lý nhân viên, Duy trì sản phẩm. | Thời gian hạn chế cho quản trị kỹ thuật chuyên sâu. |
+| **Warehouse Staff (Thủ kho)** | Kiểm soát tồn kho chính xác; Quy trình nhập hàng hiệu quả. | Hợp tác. | Quy trình Nhập/Xuất dễ dàng, số liệu kho rõ ràng. | Cần phân tách rõ ràng với chức năng Bán hàng. |
+| **Cashier (Thu ngân)** | Xử lý bán hàng nhanh chóng, không sai sót. | Tập trung vào hiệu quả. | Dễ sử dụng (ít thao tác), tốc độ thanh toán, chốt ca rõ ràng. | Áp lực cao trong giờ cao điểm. |
+
+**Phần cứng & Dịch vụ Bên ngoài:**
+
+| Thực thể | Mô tả | Tương tác |
+| :--- | :--- | :--- |
+| **Barcode Scanner (Máy quét)** | Thiết bị phần cứng để nhận diện sản phẩm. | Gửi dữ liệu mã vạch -> Hệ thống (để tìm kiếm). |
+| **Printer (Máy in)** | Thiết bị phần cứng để xuất hóa đơn. | Hệ thống gửi dữ liệu hóa đơn -> Máy in. |
+| **Payment Service (Thanh toán)** | Thành phần xử lý thanh toán bên ngoài. | Hệ thống gửi yêu cầu -> Dịch vụ trả về xác nhận. |
+| **SMS/Gmail Gateway** | Dịch vụ giao tiếp bên ngoài. | Hệ thống gửi OTP/Cảnh báo -> Cổng -> Người dùng. |
 
 ### 3.2. Ưu tiên Dự án
 

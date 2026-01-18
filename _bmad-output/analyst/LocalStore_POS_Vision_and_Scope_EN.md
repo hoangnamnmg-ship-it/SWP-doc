@@ -116,11 +116,24 @@ The roadmap prioritizes core transactional stability before advanced features.
 
 ### 3.1. Stakeholder Profiles
 
+### 3.1. Stakeholder Profiles & External Entities
+
+**Human Stakeholders:**
+
 | Stakeholder | Value/Benefit | Attitude | Key Interests | Constraints |
 | :--- | :--- | :--- | :--- | :--- |
-| **Shop Owner** | Full control of inventory and cash, eliminates leakage. | Strongly supportive (Driver). | Accurate Profit/Loss data, Theft prevention, Easy setup. | Limited budget for hardware, low tolerance for downtime. |
-| **Sales Staff** | Faster checkout, no mental math errors, automatic stock check. | Mixed (Wary of monitoring). | Ease of use (few clicks), Reliability (no crashes during rush), Clear shift handover. | Limited technical skills, high turnover rate. |
-| **Admin** | Centralized configuration, easy user mgmt. | Supportive. | Data integrity, Security, Audit logs. | Time available for initial data entry. |
+| **Manager (Owner)** | Full oversight of operations; Data-driven decision making. | Strongly supportive (Driver). | Revenue reports, Employee mgmt, Product maintenance. | Limited time for deep technical administration. |
+| **Warehouse Staff** | Accurate stock control; Efficient receiving process. | Cooperative. | Easy Import/Export flow, clear stock levels. | Needs clear distinction from Sales functions. |
+| **Cashier** | Fast, error-free sales processing. | Focused on efficiency. | Ease of use (few clicks), checkout speed, clear shift end. | High pressure during peak hours. |
+
+**Hardware & External Services:**
+
+| Entity | Description | Interaction |
+| :--- | :--- | :--- |
+| **Barcode Scanner** | Hardware device for identifying products. | Sends barcode data -> System (for item lookup). |
+| **Printer** | Hardware device for outputting receipts. | System sends invoice data -> Printer. |
+| **Payment Service** | External payment handling component. | System sends request -> Service returns confirmation. |
+| **SMS/Gmail Gateway** | External communication service. | System sends OTP/Alerts -> Gateway -> User. |
 
 ### 3.2. Project Priorities
 
