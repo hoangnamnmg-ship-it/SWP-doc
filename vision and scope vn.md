@@ -8,26 +8,23 @@
 ## 1. Yêu cầu Nghiệp vụ (Business Requirements)
 
 ### 1.1. Bối cảnh (Background)
-Hiện nay, nhiều cửa hàng bán lẻ quy mô nhỏ tại địa phương hoạt động bằng các quy trình thủ công hoặc sử dụng các công cụ quản lý rời rạc, không đồng bộ. Việc quản lý nhân viên, theo dõi ca làm việc và cập nhật trạng thái hệ thống thường xuyên dễ xảy ra sai sót, dẫn đến thất thoát doanh thu và khó khăn trong việc mở rộng quy mô. Dự án **LocalStore POS** được khởi xướng nhằm cung cấp một giải pháp quản lý bán hàng tập trung, hiện đại hóa quy trình vận hành cho các cửa hàng này.
+Hiện nay, nhiều cửa hàng bán lẻ quy mô nhỏ tại địa phương vẫn quản lý hàng hóa và doanh thu bằng sổ sách hoặc file Excel rời rạc. Việc không nắm bắt được số lượng tồn kho chính xác và doanh thu thực tế theo thời gian thực dẫn đến thất thoát hàng hóa, hết hàng không báo trước và khó khăn trong việc đánh giá hiệu quả kinh doanh. Dự án **LocalStore POS** được tái định hướng để tập trung giải quyết triệt để bài toán cốt lõi: **Hàng hóa - Bán hàng - Doanh thu**.
 
 ### 1.2. Cơ hội Kinh doanh (Business Opportunity)
-Chủ sở hữu cửa hàng cần một hệ thống đáng tin cậy để không chỉ quản lý giao dịch bán hàng mà còn quản trị nền tảng (Dữ liệu chủ) và phân quyền nhân viên chặt chẽ. Cơ hội kinh doanh nằm ở việc cung cấp một nền tảng POS tinh gọn, dễ sử dụng nhưng sở hữu các tính năng kiểm soát hành chính mạnh mẽ (tính năng Admin), điều mà các giải pháp miễn phí trên thị trường thường thiếu. Hệ thống này sẽ giải quyết:
-*   Kiểm soát chặt chẽ quyền truy cập của nhân viên.
-*   Quản lý linh hoạt các tham số hệ thống (Cài đặt/Dữ liệu chủ) mà không cần can thiệp vào mã nguồn.
-*   Tạo nền tảng cho việc mở rộng chuỗi trong tương lai.
+Chủ cửa hàng cần một công cụ đơn giản nhưng hiệu quả để kiểm soát dòng tiền và dòng hàng. Họ không cần các tính năng quản lý nhân sự phức tạp (như chấm công, chia ca) mà cần sự chính xác tuyệt đối về số liệu kho và tốc độ bán hàng. Cơ hội nằm ở việc cung cấp một hệ thống POS tập trung tối đa vào trải nghiệm bán hàng nhanh và báo cáo thông minh, giúp chủ cửa hàng trả lời ngay câu hỏi: "Hôm nay bán được bao nhiêu?" và "Kho còn bao nhiêu?".
 
 ### 1.3. Mục tiêu Kinh doanh (Business Objectives)
-*   **BO-1:** Giảm 50% thời gian dành cho việc quản trị người dùng và phân quyền nhân viên trong tháng đầu tiên triển khai.
-*   **BO-2:** Đảm bảo 100% các thay đổi cấu hình hệ thống (Cài đặt/Trạng thái) được thực hiện thông qua giao diện Admin, loại bỏ hoàn toàn việc chỉnh sửa trực tiếp cơ sở dữ liệu.
-*   **BO-3:** Cung cấp cơ chế xác thực an toàn (Mật khẩu/OTP) để giảm rủi ro truy cập trái phép xuống dưới 1%.
+*   **BO-1:** Giảm thiểu tỷ lệ sai lệch hàng tồn kho xuống dưới 1% sau 2 tháng triển khai nhờ quy trình nhập/xuất chặt chẽ.
+*   **BO-2:** Tăng tốc độ xử lý đơn hàng tại quầy thanh toán (Checkout), mục tiêu dưới 30 giây/đơn hàng.
+*   **BO-3:** Cung cấp báo cáo doanh thu và lợi nhuận theo thời gian thực (Real-time), loại bỏ hoàn toàn việc cộng sổ thủ công cuối ngày.
 
 ### 1.4. Chỉ số Thành công (Success Metrics)
-*   **SM-1:** Hệ thống vận hành ổn định với hơn 500 bản ghi dữ liệu mẫu (Gói/Cài đặt) mà không có lỗi toàn vẹn dữ liệu.
-*   **SM-2:** 100% Quản trị viên có thể thực hiện độc lập thao tác "Thêm mới Dữ liệu chủ" mà không cần hướng dẫn sau một buổi đào tạo.
-*   **SM-3:** Thời gian phản hồi cho các chức năng quản lý danh sách (Danh sách Người dùng, Danh sách Cài đặt) dưới 2 giây.
+*   **SM-1:** 100% giao dịch bán hàng được ghi nhận vào hệ thống và trừ kho tự động ngay lập tức.
+*   **SM-2:** Báo cáo doanh thu ngày được xuất ra chính xác chỉ với 1 click chuột.
+*   **SM-3:** Thời gian đào tạo nhân viên mới sử dụng tính năng bán hàng dưới 30 phút.
 
 ### 1.5. Tuyên bố Tầm nhìn (Vision Statement)
-Dành cho chủ sở hữu cửa hàng bán lẻ và Quản lý cửa hàng, những người cần sự kiểm soát chặt chẽ và linh hoạt đối với hệ thống vận hành của họ, **LocalStore POS** là một giải pháp quản lý bán hàng toàn diện. Khác với các hệ thống POS truyền thống cứng nhắc, **LocalStore POS** tập trung vào việc xây dựng một nền tảng quản trị vững chắc (Strong Admin Foundation), cho phép tùy chỉnh trạng thái hoạt động và phân quyền chi tiết, giúp doanh nghiệp vận hành trơn tru và an toàn.
+Dành cho các chủ cửa hàng bán lẻ ưu tiên hiệu quả kinh doanh và minh bạch dòng tiền, **LocalStore POS** là hệ thống quản lý tập trung vào Hàng hóa và Doanh thu. Khác với các hệ thống POS "cồng kềnh" tích hợp quá nhiều tính năng quản trị nhân sự không cần thiết, **LocalStore POS** tối ưu hóa quy trình cốt lõi: Nhập hàng nhanh - Bán hàng lẹ - Báo cáo chuẩn.
 
 ### 1.6. Rủi ro Kinh doanh (Business Risks)
 *   **RI-1:** Người dùng cuối (nhân viên bán hàng) có thể gặp khó khăn nếu giao diện quản trị quá phức tạp hoặc mang tính kỹ thuật cao.
@@ -44,24 +41,27 @@ Dành cho chủ sở hữu cửa hàng bán lẻ và Quản lý cửa hàng, nh�
 ## 2. Phạm vi và Giới hạn (Scope and Limitations)
 
 ### 2.1. Các Tính năng Chính (Major Features)
-*   **Quản trị Hệ thống (Cốt lõi):**
-    *   Bảng điều khiển Admin.
-    *   Quản lý Danh sách Cài đặt: Xem, Thêm mới, Cập nhật Trạng thái (Hoạt động/Không hoạt động), Lọc theo loại.
-*   **Quản lý Người dùng:**
-    *   Đăng ký Người dùng Mới.
-    *   Quản lý Danh sách Người dùng với thông tin chi tiết (Vai trò, Trạng thái).
-    *   Cơ chế Đăng nhập/Đăng xuất và Xác thực (OTP/Mật khẩu).
-*   **Quản lý Dữ liệu Chủ:**
-    *   CRUD (Tạo, Xem, Cập nhật, Xóa mềm) cho các thực thể Dữ liệu Chủ (Gói, Danh mục...).
+*   **Quản lý Hàng hóa & Kho (Inventory Core):**
+    *   Quản lý danh sách Sản phẩm (Tên, Giá, Barcode, Hình ảnh).
+    *   Quản lý Nhập kho (Import) và Xuất kho (Export).
+    *   Cảnh báo hàng sắp hết (Low stock alert).
+*   **Bán hàng & POS (Sales Core):**
+    *   Màn hình bán hàng (Checkout) hỗ trợ quét mã vạch.
+    *   Tạo hóa đơn, tính tiền, in bill.
+    *   Xử lý Trả hàng (Return/Refund).
+*   **Báo cáo & Thống kê (Analytics):**
+    *   Thống kê doanh thu theo Ngày/Tuần/Tháng.
+    *   Báo cáo Top sản phẩm bán chạy.
+    *   Báo cáo Lợi nhuận (Doanh thu - Giá vốn).
 
 ### 2.2. Phạm vi của Bản phát hành Đầu tiên và Các bản tiếp theo
 
 | Tính năng | Bản phát hành Đầu tiên (v1.0) | Các bản phát hành Tiếp theo (v1.x -> v2.0) |
 | :--- | :--- | :--- |
-| **Quản lý Người dùng** | Đăng ký, Đăng nhập, Danh sách Người dùng (Xem/Sửa Trạng thái) | Kiểm soát Truy cập dựa trên Vai trò Động, Ảnh đại diện Người dùng |
-| **Cài đặt Hệ thống** | Cấu hình tham số cơ bản, Trạng thái Hoạt động/Không hoạt động | Cấu hình Giao diện (Theme), Đa ngôn ngữ |
-| **Tính năng POS** | (Không nằm trong phạm vi cốt lõi của RDS hiện tại) | Màn hình Thanh toán, In Hóa đơn, Quản lý Kho |
-| **Báo cáo** | Báo cáo Chế độ xem Lưới | Biểu đồ Doanh thu, Xuất Excel/PDF |
+| **Hàng hóa** | CRUD Sản phẩm, Cập nhật tồn kho cơ bản | Quản lý lô/date, Quản lý nhiều Đơn vị tính |
+| **Bán hàng** | Tạo hóa đơn bán lẻ, Quét barcode, In bill | Bán hàng Offline, Tích hợp cân điện tử |
+| **Báo cáo** | Doanh thu tổng hợp, Lịch sử hóa đơn | Phân tích xu hướng, Dự báo nhập hàng |
+| **Quản trị khác** | Login đơn giản (Chủ/Nhân viên) | Phân quyền chi tiết, Nhật ký thao tác (Log) |
 
 > *Lưu ý: Dựa trên tài liệu G6_RDS được cung cấp, phiên bản đầu tiên tập trung mạnh vào khung quản trị (Admin/Back-office).*
 
